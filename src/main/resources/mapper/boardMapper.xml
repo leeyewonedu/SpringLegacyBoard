@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- DOCTYPE과 dtd이후의 경로는 config와 mapper를 반드시 구분할 것 -->
+<mapper namespace="Board">
+    <!-- com.spring.board.dto.BoardDTO => board -->
+    <!-- 약칭은 configuration 파일에서 지원 -->
+    <insert id="save" parameterType="board">
+        insert into board_table(boardWriter, boardPass, boardTitle, boardContents)
+        values(#{boardWriter}, #{boardPass}, #{boardTitle}, #{boardContents})
+    </insert>
+
+</mapper>
